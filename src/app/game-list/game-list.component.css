@@ -1,0 +1,8 @@
+.game-list {
+  /*width: 40%;*/
+  display: inline-block;
+}
+
+.player-name {
+  width: 90%;
+}

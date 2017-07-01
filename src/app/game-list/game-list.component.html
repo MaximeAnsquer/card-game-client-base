@@ -1,0 +1,21 @@
+<md-card class="centered game-list">
+  <md-card-header>
+    <md-card-title>Game list</md-card-title>
+    <md-card-subtitle>Waiting for an opponent</md-card-subtitle>
+  </md-card-header>
+  <md-card-content>
+    <md-list>
+      <md-list-item *ngFor="let game of games">
+        <p class="player-name">{{game.username}}</p>
+        <button [disabled]="isOwnGame(game.id)"
+                md-button class="join-button"
+                (click)="chooseDeckForJoiningGame(game.id)">Join</button>
+      </md-list-item>
+    </md-list>
+  </md-card-content>
+  <md-card-actions>
+    <button md-button (click)="chooseDeckForCreatingGame()">Create game</button>
+  </md-card-actions>
+</md-card>
+
+
